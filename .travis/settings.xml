@@ -23,6 +23,7 @@
     <pluginGroups>
         <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
     </pluginGroups>
+    <!--
     <profiles>
         <profile>
             <id>sonar</id>
@@ -35,4 +36,5 @@
             </properties>
         </profile>
     </profiles>
+    -->
 </settings>
