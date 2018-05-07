@@ -4,7 +4,7 @@
 
     <groupId>io.descoped.service</groupId>
     <artifactId>sms-project-parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Descoped SMS</name>
@@ -49,7 +49,7 @@
         <url>http://www.descoped.io</url>
         <connection>scm:git:git://github.com/descoped/descoped-sms.git</connection>
         <developerConnection>scm:git:git@github.com:descoped/descoped-sms.git</developerConnection>
-        <tag>sms-project-parent-0.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <repositories>
