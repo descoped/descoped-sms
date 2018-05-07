@@ -17,7 +17,7 @@ public class ProdatResolverImpl implements Resolver {
     private static ProdatResolverImpl me;
 
     /*
-     * @see sedna.services.communication.service.encoder.Resolver#getFormatter(sedna.services.communication.service.encoder.MessageFormat)
+     * @see io.descoped.service.message.sms.encoder.Resolver#getFormatter(io.descoped.service.message.sms.encoder.MessageFormat)
      */
     public Formatter getFormatter(MessageFormat format) {
         Formatter formatter = null;
@@ -42,7 +42,7 @@ public class ProdatResolverImpl implements Resolver {
     }
 
     /*
-     * @see sedna.services.communication.service.encoder.Resolver#getOperationCode(sedna.services.communication.service.encoder.MessageFormat)
+     * @see io.descoped.service.message.sms.encoder.Resolver#getOperationCode(io.descoped.service.message.sms.encoder.MessageFormat)
      */
     public Object getOperationCode(MessageFormat format) {
         Object opcode = null;

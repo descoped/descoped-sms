@@ -14,6 +14,10 @@ public interface Operator {
 
     public void setMethod(SmsMethod method);
 
+    public String getAffiliateProgram();
+
+    public void setAffiliateProgram(String affiliateProgram);
+
     public String getHost();
 
     public void setHost(String host);

@@ -19,7 +19,7 @@ public class MockSender extends SenderImpl implements Sender {
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Sender#send()
+     * @see io.descoped.service.message.sms.provider.Sender#send()
      */
     public Messages send() throws CommunicationError, ResponseException {
         Messenger messenger = new MockProdatMessenger(provider);

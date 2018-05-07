@@ -21,6 +21,8 @@ import java.util.Iterator;
 
 
 /**
+ * https://wiki.pswin.com/Gateway%20XML%20API.ashx#XML_examples_17
+ *
  * @author Ove Ranheim (oranheim@descoped.io)
  * @since Jun 17, 2004 9:39:05 PM
  */
@@ -63,8 +65,8 @@ public class ProdatRequestImpl implements SmsRequest {
     }
 
     /*
-     * @see sedna.services.communication.service.provider.SenderImpl#prepare(Messages messages)
-     * @see sedna.services.communication.service.provider.SmsRequest#prepare()
+     * @see io.descoped.service.message.sms.provider.SenderImpl#prepare(Messages messages)
+     * @see io.descoped.service.message.sms.provider.SmsRequest#prepare()
      */
     public void prepare() throws RequestException, ConvertException {
         Operator operator = provider.getOperator();
@@ -74,7 +76,8 @@ public class ProdatRequestImpl implements SmsRequest {
         buffer.append("<SESSION>\n");
         buffer.append("<CLIENT>" + operator.getUsername() + "</CLIENT>\n");
         buffer.append("<PW>" + operator.getPassword() + "</PW>\n");
-        buffer.append("<AP>eXo</AP>\n");
+        if (operator.getAffiliateProgram() != null)
+            buffer.append(String.format("<AP>%s</AP>\n", operator.getAffiliateProgram()));
         //buffer.append("<SD></SD>\n"); // Session Data Code
         buffer.append("<MSGLST>\n");
         for (Iterator<Message> i = messages.iterator(); i.hasNext(); ) {

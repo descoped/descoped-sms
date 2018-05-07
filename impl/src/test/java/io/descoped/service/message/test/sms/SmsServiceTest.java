@@ -45,7 +45,7 @@ public class SmsServiceTest {
         Message message = messages.addMessage();
         message.setFrom("123456789");
         message.addRecipient(service.createRecipient("123456789"));
-        message.addRecipient("4793060933");
+        message.addRecipient("234567890");
         message.setFormat(MessageFormat.PLAIN_TEXT);
         message.setContent("Plain text message");
 
@@ -60,14 +60,14 @@ public class SmsServiceTest {
     @Test
     public void testNumberFormat() throws Exception {
         String token1 = "+33-11-44-55-66";
-        String token2 = "0047-227.79.933";
-        String token3 = "0047-227.79a933";
+        String token2 = "0047-227.78.899";
+        String token3 = "0047-227.78a899";
 
         token1 = SmsUtil.prepareCellularNumber(token1);
         assert "3311445566".equals(token1);
 
         token2 = SmsUtil.prepareCellularNumber(token2);
-        assert "4722779933".equals(token2);
+        assert "4722778899".equals(token2);
 
         boolean isAlpha = SmsUtil.isAlpha(token3);
         assert isAlpha == true;

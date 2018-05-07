@@ -33,14 +33,14 @@ public class ProdatAdapterImpl implements Adapter {
     }
 
     /*
-     * @see sedna.services.communication.service.adapter.Adapter#getRequest()
+     * @see io.descoped.service.message.sms.adapter.Adapter#getRequest()
      */
     public SmsRequest getRequest() {
         return request;
     }
 
     /*
-     * @see sedna.services.communication.service.adapter.Adapter#getResponse()
+     * @see io.descoped.service.message.sms.adapter.Adapter#getResponse()
      */
     public SmsResponse getResponse() {
         return response;

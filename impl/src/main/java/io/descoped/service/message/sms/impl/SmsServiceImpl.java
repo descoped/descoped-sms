@@ -30,7 +30,7 @@ public class SmsServiceImpl implements SmsService {
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#createProdatProvider(java.lang.String,
+     * @see io.descoped.service.message.sms.SmsService#createProdatProvider(java.lang.String,
      *      java.lang.String)
      */
     public Provider createProdatProvider(String username, String password) {
@@ -41,28 +41,28 @@ public class SmsServiceImpl implements SmsService {
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#createMessages()
+     * @see io.descoped.service.message.sms.SmsService#createMessages()
      */
     public Messages createMessages() {
         return new MessagesImpl();
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#createMessaage()
+     * @see io.descoped.service.message.sms.SmsService#createMessaage()
      */
     public Message createMessage() {
         return new MessageImpl();
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#createRecipient()
+     * @see io.descoped.service.message.sms.SmsService#createRecipient()
      */
     public Recipient createRecipient(String to) {
         return new RecipientImpl(to);
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#getSender()
+     * @see io.descoped.service.message.sms.SmsService#getSender()
      */
     public Sender createSender(Provider provider) {
         Sender sender = new SenderImpl(provider);
@@ -70,8 +70,8 @@ public class SmsServiceImpl implements SmsService {
     }
 
     /*
-     * @see sedna.services.communication.service.SmsService#sendSms(sedna.services.communication.service.provider.Provider,
-     *      sedna.services.communication.service.unit.Messages)
+     * @see io.descoped.service.message.sms.SmsService#sendSms(io.descoped.service.message.sms.provider.Provider,
+     *      io.descoped.service.message.sms.unit.Messages)
      */
     public boolean sendSms(Provider provider, Messages messages) throws CommunicationError, RequestException, ResponseException, ConvertException {
         Sender sender = new SenderImpl(provider);

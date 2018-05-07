@@ -26,14 +26,14 @@ public class SenderImpl implements Sender {
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Sender#getProvider()
+     * @see io.descoped.service.message.sms.provider.Sender#getProvider()
      */
     public Provider getProvider() {
         return provider;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Sender#clear()
+     * @see io.descoped.service.message.sms.provider.Sender#clear()
      */
     public void clear() {
         request = null;
@@ -41,7 +41,7 @@ public class SenderImpl implements Sender {
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Sender#prepare(sedna.services.communication.service.unit.Messages)
+     * @see io.descoped.service.message.sms.provider.Sender#prepare(io.descoped.service.message.sms.unit.Messages)
      */
     public void prepare(Messages messages) throws RequestException, ConvertException {
         Adapter adapter = provider.getAdapter();
@@ -53,7 +53,7 @@ public class SenderImpl implements Sender {
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Sender#send()
+     * @see io.descoped.service.message.sms.provider.Sender#send()
      */
     public Messages send() throws CommunicationError, ResponseException {
         Messenger messenger = provider.getMessenger();

@@ -40,50 +40,60 @@ public class ProdatProviderImpl implements Provider {
         operator.setPassword(password);
     }
 
+    public ProdatProviderImpl(String affiliateProgram, String username, String password) {
+        operator = new ProdatOperatorImpl();
+        operator.setAffiliateProgram(affiliateProgram);
+        adapter = new ProdatAdapterImpl(this);
+        messenger = new ProdatMessengerImpl(this);
+        resolver = ProdatResolverImpl.getInstance();
+        operator.setUsername(username);
+        operator.setPassword(password);
+    }
+
     /*
-     * @see sedna.services.communication.service.provider.Provider#getOperator()
+     * @see io.descoped.service.message.sms.provider.Provider#getOperator()
      */
     public Operator getOperator() {
         return operator;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#setOperator(sedna.services.communication.service.provider.Operator)
+     * @see io.descoped.service.message.sms.provider.Provider#setOperator(io.descoped.service.message.sms.provider.Operator)
      */
     public void setOperator(Operator operator) {
         this.operator = operator;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#getAdapter()
+     * @see io.descoped.service.message.sms.provider.Provider#getAdapter()
      */
     public Adapter getAdapter() {
         return adapter;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#setAdapter(sedna.services.communication.service.adapter.Adapter)
+     * @see io.descoped.service.message.sms.provider.Provider#setAdapter(io.descoped.service.message.sms.adapter.Adapter)
      */
     public void setAdapter(Adapter adapter) {
         this.adapter = adapter;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#getMessenger()
+     * @see io.descoped.service.message.sms.provider.Provider#getMessenger()
      */
     public Messenger getMessenger() {
         return messenger;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#setMessenger(sedna.services.communication.service.provider.Messenger)
+     * @see io.descoped.service.message.sms.provider.Provider#setMessenger(io.descoped.service.message.sms.provider.Messenger)
      */
     public void setMessenger(Messenger messenger) {
         this.messenger = messenger;
     }
 
     /*
-     * @see sedna.services.communication.service.provider.Provider#getResolver()
+     * @see io.descoped.service.message.sms.provider.Provider#getResolver()
      */
     public Resolver getResolver() {
         return resolver;
