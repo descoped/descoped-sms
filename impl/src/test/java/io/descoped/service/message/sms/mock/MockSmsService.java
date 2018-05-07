@@ -34,6 +34,11 @@ public class MockSmsService extends SmsServiceImpl implements SmsService {
         return super.createProdatProvider(username, password);
     }
 
+    @Override
+    public Provider createProdatProvider(String affiliateProgram, String username, String password) {
+        return super.createProdatProvider(affiliateProgram, username, password);
+    }
+
     public Recipient createRecipient(String to) {
         return super.createRecipient(to);
     }

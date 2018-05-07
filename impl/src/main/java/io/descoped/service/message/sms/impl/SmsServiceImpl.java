@@ -40,6 +40,15 @@ public class SmsServiceImpl implements SmsService {
         return provider;
     }
 
+    @Override
+    public Provider createProdatProvider(String affiliateProgram, String username, String password) {
+        Provider provider = new ProdatProviderImpl();
+        provider.getOperator().setAffiliateProgram(affiliateProgram);
+        provider.getOperator().setUsername(username);
+        provider.getOperator().setPassword(password);
+        return provider;
+    }
+
     /*
      * @see io.descoped.service.message.sms.SmsService#createMessages()
      */

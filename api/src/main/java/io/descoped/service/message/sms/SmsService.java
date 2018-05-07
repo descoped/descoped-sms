@@ -22,6 +22,8 @@ public interface SmsService {
 
     public Provider createProdatProvider(String username, String password);
 
+    public Provider createProdatProvider(String affiliateProgram, String username, String password);
+
     public Sender createSender(Provider provider);
 
     public Messages createMessages();
